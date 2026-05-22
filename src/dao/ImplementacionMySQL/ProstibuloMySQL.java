@@ -13,13 +13,13 @@ public class ProstibuloMySQL implements DAO<Prostibulos> {
         String sql = "INSERT INTO prostibulos (nomProstibulo, direccionProstibulo, capacidadChicas, origen, travestit, drogas, armas, precio) VALUES (?,?,?,?,?,?,?,?)";;
         try(Connection conn = Conexion.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setString(1,obj.getNomProstibulo());
-            ps.setString(1,obj.getDireccionProstibulo());
-            ps.setInt(1,obj.getCapacidadChicas());
-            ps.setString(1,obj.getOrigen().name().toLowerCase());
-            ps.setBoolean(1,obj.isTravestit());
-            ps.setBoolean(1,obj.isDrogas());
-            ps.setBoolean(1,obj.isArmas());
-            ps.setInt(1,obj.getPrecio());
+            ps.setString(2,obj.getDireccionProstibulo());
+            ps.setInt(3,obj.getCapacidadChicas());
+            ps.setString(4,obj.getOrigen().name().toLowerCase());
+            ps.setBoolean(5,obj.isTravestit());
+            ps.setBoolean(6,obj.isDrogas());
+            ps.setBoolean(7,obj.isArmas());
+            ps.setInt(8,obj.getPrecio());
 
             ps.executeUpdate();
         }

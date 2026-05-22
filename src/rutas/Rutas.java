@@ -1,5 +1,6 @@
 package rutas;
 
+import com.sun.net.httpserver.HttpHandler;
 import fentafloyd.*;
 import com.sun.net.httpserver.HttpServer;
 
@@ -8,7 +9,7 @@ public class Rutas {
 
         server.createContext(
                 "/prostibulos",
-                new ProstibuloFloyder()
+                (HttpHandler) new ProstibuloFloyder()
         );
 
         server.createContext(

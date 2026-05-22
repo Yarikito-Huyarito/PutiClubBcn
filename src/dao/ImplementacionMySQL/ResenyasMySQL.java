@@ -23,7 +23,7 @@ public class ResenyasMySQL implements DAO<Resenyas> {
 
     @Override
     public Resenyas getById(int id) throws Exception {
-        String sql = "SELECT FROM ressenyes WHERE id = ?";
+        String sql = "SELECT *FROM ressenyes WHERE id = ?";
         try(Connection conn = Conexion.getConnection(); PreparedStatement ps = conn.prepareStatement(sql)){
             ps.setInt(1,id);
             ResultSet rs = ps.executeQuery();
