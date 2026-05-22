@@ -2,7 +2,7 @@ package model;
 
 public class Prostibulos {
     //Atributos de classe Prostibulos:
-    private int id;
+    private int idProstibulo;
     private String nomProstibulo;
     private String direccionProstibulo;
     private int capacidadChicas;
@@ -18,7 +18,7 @@ public class Prostibulos {
     //Constructor completo:
     public Prostibulos(int id, String nomProstibulo, String direccionProstibulo, int capacidadChicas,
                        OrigenEnum origen, boolean travestit, boolean drogas, boolean armas, int precio) {
-        this.id = id;
+        this.idProstibulo = id;
         this.nomProstibulo = nomProstibulo;
         this.direccionProstibulo = direccionProstibulo;
         this.capacidadChicas = capacidadChicas;
@@ -30,8 +30,8 @@ public class Prostibulos {
     }
 
     //GETTERS:
-    public int getId() {
-        return id;
+    public int getIdProstibulo() {
+        return idProstibulo;
     }
 
     public String getNomProstibulo() {
@@ -71,7 +71,7 @@ public class Prostibulos {
 
     //SETTERS:
     public void setId(int id) {
-        this.id = id;
+        this.idProstibulo = id;
     }
     public void setNomProstibulo(String nomProstibulo) {
         this.nomProstibulo = nomProstibulo;
